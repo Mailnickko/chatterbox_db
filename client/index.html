@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>chatterbox</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+<!--     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/underscore/underscore.js"></script> -->
+
+    <!-- dependencies -->
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./bower_components/underscore/underscore-min.js"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- your scripts -->
+    <script src="scripts/app.js"></script>
+    <script>
+
+      $(document).ready(function() {
+        app.init();
+      })
+    </script>
+  </head>
+  <body>
+    <div id="main">
+      <!-- Your HTML goes here! -->
+      <h1>chatterbox</h1>
+
+      <button class="fetcher">Fetch</button>
+      <button class="clear">Clear Messages</button>
+
+      <form>
+          <div class="form-group">
+            <select class="rooms">
+              <option value='lobby' selected>lobby</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <span>Create a Room</span>
+            <input class="newRoom form-control" type="text" name="message" placeholder="Create a new room">
+          </div>
+          <button class="makeARoom btn btn-success">Create a Room</button>
+          <div class="form-group">
+            <span>Say something</span>
+            <input class="userMessage form-control" type="text" name="message" placeholder="Write your message...">
+          </div>
+          <button class="messageSubmit btn btn-primary">Send a Message</button>
+      </form>
+
+      <div class="messageList">
+
+      </div>
+    </div>
+  </body>
+</html>
